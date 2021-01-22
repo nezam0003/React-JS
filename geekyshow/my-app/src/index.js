@@ -13,5 +13,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(el, document.getElementById("root"));
 
 /* ******** JSX with Attributes *********** */
-import el from "./JsX";
-ReactDOM.render(el, document.getElementById("root"));
+// import el from "./JsX";
+// ReactDOM.render(el, document.getElementById("root"));
+
+/***************** Props ******************/
+import Student from "./Props";
+ReactDOM.render(<Student name="Nezam" roll="101" />, document.getElementById("root"));
