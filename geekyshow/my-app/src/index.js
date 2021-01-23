@@ -16,6 +16,9 @@ import ReactDOM from "react-dom";
 // import el from "./JsX";
 // ReactDOM.render(el, document.getElementById("root"));
 
+/************** Child in JsX **************/
+import Student from "./JsX";
+ReactDOM.render(<Student>I am child</Student>, document.getElementById("root"));
 /***************** Props ******************/
-import Student from "./Props";
-ReactDOM.render(<Student name="Nezam" roll="101" />, document.getElementById("root"));
+// import Student from "./Props";
+// ReactDOM.render(<Student name="Nezam" roll="101" />, document.getElementById("root"));
