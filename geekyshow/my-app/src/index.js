@@ -25,5 +25,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<Student name="Nezam" roll="101" />, document.getElementById("root"));
 
 /************** State **************/
-import Student from "./State";
-ReactDOM.render(<Student age={27} />, document.getElementById("root"));
+// import Student from "./State";
+// ReactDOM.render(<Student age={27} />, document.getElementById("root"));
+
+/************** Event **************/
+import Student from "./Event";
+ReactDOM.render(<Student />, document.getElementById("root"));
