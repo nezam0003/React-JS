@@ -41,19 +41,87 @@
 // }
 
 /**************** Unmounting component */
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-export default class App extends Component {
-  componentDidMount() {
-    console.log("App did Mount");
-  }
-  render() {
-    console.log("App Rendered");
+// export default class App extends Component {
+//   componentDidMount() {
+//     console.log("App did Mount");
+//   }
+//   render() {
+//     console.log("App Rendered");
 
-    return (
-      <div>
-        <h1>App component</h1>
-      </div>
-    );
-  }
-}
+//     return (
+//       <div>
+//         <h1>App component</h1>
+//       </div>
+//     );
+//   }
+// }
+
+/************* useState Hooks *****************/
+// import React, { Fragment, useState } from "react";
+// const App = () => {
+//   const [name, editName] = useState("Nezam");
+//   const changeName = () => {
+//     editName("Fhameed");
+//   };
+//   return (
+//     <Fragment>
+//       <h1>Hello, {name}</h1>
+//       <button type="button" onClick={changeName}>
+//         Change Name
+//       </button>
+//     </Fragment>
+//   );
+// };
+// export default App;
+
+/************* useEffect Hooks *****************/
+// import React, { Fragment, useState, useEffect } from "react";
+// const App = () => {
+//   const [countUp, setCount] = useState(0);
+//   const [countDown, setCountDown] = useState(50);
+//   const countUpFun = () => {
+//     setCount(countUp + 1);
+//   };
+//   const countDownFun = () => {
+//     setCountDown(countDown - 1);
+//   };
+//   useEffect(() => {
+//     console.log("Use Effect Called");
+//   }, [countUp]);
+//   return (
+//     <Fragment>
+//       <h1>Count Up: {countUp} </h1>
+//       <button type="button" onClick={countUpFun}>
+//         increament
+//       </button>
+//       <h1>Count Down: {countDown} </h1>
+//       <button type="button" onClick={countDownFun}>
+//         decreament
+//       </button>
+//     </Fragment>
+//   );
+// };
+// export default App;
+
+/************* Custom Hooks *****************/
+import React, { Fragment } from "react";
+import useCustomCounter from "./Custom";
+
+const App = () => {
+  const counter = useCustomCounter();
+  return (
+    <Fragment>
+      <h1>Count Up: {counter.count}</h1>
+      <button type="button" onClick={counter.countUpFun}>
+        Increament
+      </button>
+      <h1>Count Down: {counter.countDown}</h1>
+      <button type="button" onClick={counter.countDownFun}>
+        Decreament
+      </button>
+    </Fragment>
+  );
+};
+export default App;

@@ -41,9 +41,17 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<Grandfather />, document.getElementById("root"));
 
 /************** Unmounting phase **************/
-import Unmount from "./Unmount";
-import App from "./App";
+// import Unmount from "./Unmount";
+// import App from "./App";
 
+// ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(<Unmount />, document.getElementById("unmount"));
+// ReactDOM.unmountComponentAtNode(document.getElementById("unmount"));
+
+/************* useState Hooks *****************/
+// import App from "./App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/************* Custom Hooks *****************/
+import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
-ReactDOM.render(<Unmount />, document.getElementById("unmount"));
-ReactDOM.unmountComponentAtNode(document.getElementById("unmount"));
