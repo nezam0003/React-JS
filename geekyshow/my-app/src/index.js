@@ -37,5 +37,13 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<Student name="I_AM_STUDENT_PROP" />, document.getElementById("root"));
 
 /************** Updating phase **************/
-import Grandfather from "./Grandfather";
-ReactDOM.render(<Grandfather />, document.getElementById("root"));
+// import Grandfather from "./Grandfather";
+// ReactDOM.render(<Grandfather />, document.getElementById("root"));
+
+/************** Unmounting phase **************/
+import Unmount from "./Unmount";
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Unmount />, document.getElementById("unmount"));
+ReactDOM.unmountComponentAtNode(document.getElementById("unmount"));

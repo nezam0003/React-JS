@@ -25,16 +25,34 @@
 // };
 // export default App;
 
+// import React, { Component } from "react";
+// import Student1 from "./Student1";
+
+// export default class App extends Component {
+//   render() {
+//     console.log("App -Rendered [child of Mounting(Student)]");
+//     return (
+//       <div>
+//         <h1>hello, {this.props.name}</h1>
+//         <Student1 />
+//       </div>
+//     );
+//   }
+// }
+
+/**************** Unmounting component */
 import React, { Component } from "react";
-import Student1 from "./Student1";
 
 export default class App extends Component {
+  componentDidMount() {
+    console.log("App did Mount");
+  }
   render() {
-    console.log("App -Rendered [child of Mounting(Student)]");
+    console.log("App Rendered");
+
     return (
       <div>
-        <h1>hello, {this.props.name}</h1>
-        <Student1 />
+        <h1>App component</h1>
       </div>
     );
   }
