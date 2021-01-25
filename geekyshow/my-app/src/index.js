@@ -32,6 +32,10 @@ import ReactDOM from "react-dom";
 // import Student from "./State";
 // ReactDOM.render(<Student age={27} />, document.getElementById("root"));
 
-/************** Mounting **************/
-import Student from "./Mounting";
-ReactDOM.render(<Student name="I_AM_STUDENT_PROP" />, document.getElementById("root"));
+/************** Mounting Phase **************/
+// import Student from "./Mounting";
+// ReactDOM.render(<Student name="I_AM_STUDENT_PROP" />, document.getElementById("root"));
+
+/************** Updating phase **************/
+import Grandfather from "./Grandfather";
+ReactDOM.render(<Grandfather />, document.getElementById("root"));
