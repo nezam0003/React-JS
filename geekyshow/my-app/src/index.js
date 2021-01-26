@@ -53,5 +53,14 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /************* Custom Hooks *****************/
-import App from "./App";
+// import App from "./App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/************* Conditional Rendering *****************/
+// import App from "./conditional-rendering/App";
+// ReactDOM.render(<App primeMember={true} />, document.getElementById("root"));
+
+/************ if-else operator ********** */
+
+import App from "./conditional-rendering/App";
 ReactDOM.render(<App />, document.getElementById("root"));
