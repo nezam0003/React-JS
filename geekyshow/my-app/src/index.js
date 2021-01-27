@@ -62,5 +62,14 @@ import ReactDOM from "react-dom";
 
 /************ if-else operator ********** */
 
-import App from "./conditional-rendering/App";
+// import App from "./conditional-rendering/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/************** Lists  ****************/
+// import App from "./Lists/App";
+// const arrValues = [5, 10, 20, 25, 30];
+// ReactDOM.render(<App numbers={arrValues} />, document.getElementById("root"));
+
+/**** List using state ****/
+import App from "./Lists/App";
 ReactDOM.render(<App />, document.getElementById("root"));
