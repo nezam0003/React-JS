@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // import App from "./App";
 
 /* ******** Function and class Component *********** */
@@ -79,5 +80,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /********** Images/assists use case *************/
-import App from "./App";
-ReactDOM.render(<App />, document.getElementById("root"));
+// import App from "./App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/********** how to use Bootstrap in React *************/
+import Bootstrap from "./Bootstrap";
+ReactDOM.render(<Bootstrap />, document.getElementById("root"));
