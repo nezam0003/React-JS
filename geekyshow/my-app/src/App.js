@@ -106,22 +106,39 @@
 // export default App;
 
 /************* Custom Hooks *****************/
-import React, { Fragment } from "react";
-import useCustomCounter from "./Custom";
+// import React, { Fragment } from "react";
+// import useCustomCounter from "./Custom";
 
-const App = () => {
-  const counter = useCustomCounter();
-  return (
-    <Fragment>
-      <h1>Count Up: {counter.count}</h1>
-      <button type="button" onClick={counter.countUpFun}>
-        Increament
-      </button>
-      <h1>Count Down: {counter.countDown}</h1>
-      <button type="button" onClick={counter.countDownFun}>
-        Decreament
-      </button>
-    </Fragment>
-  );
-};
-export default App;
+// const App = () => {
+//   const counter = useCustomCounter();
+//   return (
+//     <Fragment>
+//       <h1>Count Up: {counter.count}</h1>
+//       <button type="button" onClick={counter.countUpFun}>
+//         Increament
+//       </button>
+//       <h1>Count Down: {counter.countDown}</h1>
+//       <button type="button" onClick={counter.countDownFun}>
+//         Decreament
+//       </button>
+//     </Fragment>
+//   );
+// };
+// export default App;
+
+/********** Images/assists use case *************/
+import React, { Component } from "react";
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <img
+          src={process.env.PUBLIC_URL + "/images/portfolio-1.jpg"}
+          alt="portfolio-1"
+          width="300px"
+        />
+      </div>
+    );
+  }
+}

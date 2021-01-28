@@ -75,5 +75,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /**************** CSS Style ****************/
-import App from "./CSS-Style/App";
+// import App from "./CSS-Style/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/********** Images/assists use case *************/
+import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
