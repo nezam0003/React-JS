@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // import App from "./App";
 
 /* ******** Function and class Component *********** */
@@ -84,5 +84,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /********** how to use Bootstrap in React *************/
-import Bootstrap from "./Bootstrap";
-ReactDOM.render(<Bootstrap />, document.getElementById("root"));
+// import Bootstrap from "./Bootstrap";
+// ReactDOM.render(<Bootstrap />, document.getElementById("root"));
+
+/*********** Form component (Control component) ************/
+import App from "./App";
+ReactDOM.render(<App />, document.getElementById("root"));

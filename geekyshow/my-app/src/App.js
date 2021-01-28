@@ -127,17 +127,116 @@
 // export default App;
 
 /********** Images/assists use case *************/
+// import React, { Component } from "react";
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <img
+//           src={process.env.PUBLIC_URL + "/images/portfolio-1.jpg"}
+//           alt="portfolio-1"
+//           width="300px"
+//         />
+//       </div>
+//     );
+//   }
+// }
+
+/*********** Form component (Control component) ************/
+// import React, { Component } from "react";
+
+// export default class App extends Component {
+//   state = {
+//     value: "",
+//   };
+//   onChangeHandler = (e) => {
+//     this.setState({ value: e.target.value.toUpperCase() });
+//   };
+//   render() {
+//     return (
+//       <div>
+//         <form>
+//           <h2>React Control Component</h2>
+//           <input type="text" value={this.state.value} onChange={this.onChangeHandler} />
+//         </form>
+//       </div>
+//     );
+//   }
+// }
+
+/********* text-area **********/
+// import React, { Component } from "react";
+
+// export default class App extends Component {
+//   state = {
+//     value: "",
+//   };
+//   changeTextHandle = (e) => {
+//     this.setState({ value: e.target.value });
+//   };
+//   render() {
+//     return (
+//       <div>
+//         <form>
+//           <textarea value={this.state.value} onChange={this.changeTextHandle} />
+//         </form>
+//       </div>
+//     );
+//   }
+// }
+
+/********* Multiple Inputs **********/
+
 import React, { Component } from "react";
 
 export default class App extends Component {
+  state = {
+    name: "",
+    password: "",
+  };
+
+  /******* One Approach ******/
+  // handleName = (e) => {
+  //   this.setState({
+  //     name: e.target.value,
+  //   });
+  // };
+  // handlePassword = (e) => {
+  //   this.setState({
+  //     password: e.target.value,
+  //   });
+  // };
+
+  /******** Another Approach **********/
+  handleFormInput = (e) => {
+    // this.setState({ [e.target.name]: e.target.value });
+    const inputValue = e.target.name === "password" ? e.target.value.substr(0, 10) : e.target.value;
+    this.setState({ [e.target.name]: inputValue });
+  };
   render() {
     return (
       <div>
-        <img
-          src={process.env.PUBLIC_URL + "/images/portfolio-1.jpg"}
-          alt="portfolio-1"
-          width="300px"
-        />
+        <form>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleFormInput}
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="text"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleFormInput}
+            />
+          </label>
+        </form>
       </div>
     );
   }
