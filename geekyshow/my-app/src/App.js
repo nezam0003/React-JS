@@ -210,14 +210,19 @@ export default class App extends Component {
 
   /******** Another Approach **********/
   handleFormInput = (e) => {
-    // this.setState({ [e.target.name]: e.target.value });
-    const inputValue = e.target.name === "password" ? e.target.value.substr(0, 10) : e.target.value;
-    this.setState({ [e.target.name]: inputValue });
+    this.setState({ [e.target.name]: e.target.value });
+    // const inputValue = e.target.name === "password" ? e.target.value.substr(0, 10) : e.target.value;
+    // this.setState({ [e.target.name]: inputValue });
+  };
+  hadleForm = (e) => {
+    e.preventDefault();
+    console.log(e);
+    console.log(e.target[0].value);
   };
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.hadleForm}>
           <label>
             Name:
             <input
@@ -236,6 +241,7 @@ export default class App extends Component {
               onChange={this.handleFormInput}
             />
           </label>
+          <input type="submit" value="submit" />
         </form>
       </div>
     );
