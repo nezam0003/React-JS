@@ -1,20 +1,17 @@
 import React, { Component } from "react";
-import { Consumer } from "./Context";
+// import { Consumer } from "./Context";
+import { MyContext } from "./Context";
 export default class GrandChild extends Component {
+  static contextType = MyContext;
   render() {
+    const { name, value } = this.context.data;
     return (
       <div>
         <h2>Guest Component</h2>
-        <Consumer>
-          {({ data, clickHandle }) => (
-            <>
-              <h4>
-                Name: {data.name} value : {data.value}
-              </h4>
-              <button onClick={clickHandle}>Change value</button>
-            </>
-          )}
-        </Consumer>
+        <h4>
+          Name: {name} value : {value}
+        </h4>
+        <button onClick={this.context.clickHandle}>Change value</button>
       </div>
     );
   }
