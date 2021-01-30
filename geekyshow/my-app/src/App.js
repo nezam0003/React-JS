@@ -188,62 +188,140 @@
 
 /********* Multiple Inputs **********/
 
+// import React, { Component } from "react";
+
+// export default class App extends Component {
+//   state = {
+//     name: "",
+//     password: "",
+//   };
+
+/******* One Approach ******/
+// handleName = (e) => {
+//   this.setState({
+//     name: e.target.value,
+//   });
+// };
+// handlePassword = (e) => {
+//   this.setState({
+//     password: e.target.value,
+//   });
+// };
+
+/******** Another Approach **********/
+// handleFormInput = (e) => {
+//   this.setState({ [e.target.name]: e.target.value });
+// const inputValue = e.target.name === "password" ? e.target.value.substr(0, 10) : e.target.value;
+// this.setState({ [e.target.name]: inputValue });
+//   // };
+//   hadleForm = (e) => {
+//     e.preventDefault();
+//     console.log(e);
+//     console.log(e.target[0].value);
+//   };
+//   render() {
+//     return (
+//       <div>
+//         <form onSubmit={this.hadleForm}>
+//           <label>
+//             Name:
+//             <input
+//               type="text"
+//               name="name"
+//               value={this.state.name}
+//               onChange={this.handleFormInput}
+//             />
+//           </label>
+//           <label>
+//             Password:
+//             <input
+//               type="text"
+//               name="password"
+//               value={this.state.password}
+//               onChange={this.handleFormInput}
+//             />
+//           </label>
+//           <input type="submit" value="submit" />
+//         </form>
+//       </div>
+//     );
+//   }
+// }
+
+/*********  Uncontrolled component Ref() **********/
+// import React, { Component, Fragment } from "react";
+
+// export default class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       value: "",
+//     };
+//     this.textInput = React.createRef();
+//   }
+// componentDidMount() {
+//   console.log(this.textInput.current);
+//   this.textInput.current.focus();
+// }
+
+// handleForm = (e) => {
+//   e.preventDefault();
+//   this.setState({
+//     value: this.textInput.current.value,
+//   });
+// };
+// render() {
+//   return (
+// <form>
+//   Name: <input type="text" />
+//   <br />
+//   Password: <input type="text" ref={this.textInput} />
+//   <br />
+//   address: <input type="text" />
+// </form>
+
+/******* Another Approach ***********/
+//       <Fragment>
+//         <h2>You Typed: {this.state.value}</h2>
+//         <form onSubmit={this.handleForm}>
+//           Name: <input type="text" ref={this.textInput} />
+//           <button type="submit" value="submit">
+//             Submit
+//           </button>
+//         </form>
+//       </Fragment>
+//     );
+//   }
+// }
+
+/************* Call Back Refs() ***************/
 import React, { Component } from "react";
 
 export default class App extends Component {
-  state = {
-    name: "",
-    password: "",
-  };
+  constructor() {
+    super();
+    this.backRef = null;
+    this.setBackRef = (element) => {
+      this.backRef = element;
+    };
+  }
+  componentDidMount() {
+    if (this.backRef) {
+      this.backRef.focus();
+    }
+  }
 
-  /******* One Approach ******/
-  // handleName = (e) => {
-  //   this.setState({
-  //     name: e.target.value,
-  //   });
-  // };
-  // handlePassword = (e) => {
-  //   this.setState({
-  //     password: e.target.value,
-  //   });
-  // };
-
-  /******** Another Approach **********/
-  handleFormInput = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-    // const inputValue = e.target.name === "password" ? e.target.value.substr(0, 10) : e.target.value;
-    // this.setState({ [e.target.name]: inputValue });
-  };
-  hadleForm = (e) => {
-    e.preventDefault();
-    console.log(e);
-    console.log(e.target[0].value);
-  };
   render() {
     return (
-      <div>
-        <form onSubmit={this.hadleForm}>
-          <label>
-            Name:
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleFormInput}
-            />
-          </label>
-          <label>
-            Password:
-            <input
-              type="text"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleFormInput}
-            />
-          </label>
-          <input type="submit" value="submit" />
-        </form>
-      </div>
+      <form>
+        Name: <input type="text" />
+        <br />
+        <br />
+        Password: <input type="text" ref={this.setBackRef} />
+        <br />
+        <br />
+        address: <input type="text" />
+      </form>
     );
   }
 }
