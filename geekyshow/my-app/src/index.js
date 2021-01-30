@@ -88,5 +88,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<Bootstrap />, document.getElementById("root"));
 
 /*********** Form component (Control component) ************/
-import App from "./App";
+// import App from "./App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/*********** Lifting State ************/
+import App from "./Lifting-State/App";
 ReactDOM.render(<App />, document.getElementById("root"));
