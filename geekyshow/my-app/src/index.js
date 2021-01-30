@@ -92,5 +92,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /*********** Lifting State ************/
-import App from "./Lifting-State/App";
-ReactDOM.render(<App />, document.getElementById("root"));
+// import App from "./Lifting-State/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/*********** Context API ************/
+import Parent from "./Context-API/Parent";
+ReactDOM.render(<Parent />, document.getElementById("root"));
