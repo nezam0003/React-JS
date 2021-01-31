@@ -96,5 +96,9 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /*********** Context API ************/
-import Parent from "./Context-API/Parent";
-ReactDOM.render(<Parent />, document.getElementById("root"));
+// import Parent from "./Context-API/Parent";
+// ReactDOM.render(<Parent />, document.getElementById("root"));
+
+/*********** Higher Order Component(HOC) ************/
+import App from "./HOC/App";
+ReactDOM.render(<App />, document.getElementById("root"));
