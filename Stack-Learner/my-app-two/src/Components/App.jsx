@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
-
+import React, { Component, Fragment } from 'react'
+import Profile from './Profile/index'
 export default class App extends Component {
     render() {
         return (
-            <h1>Hello world</h1>
+        <Fragment>
+            <Profile/>
+        </Fragment>
         )
     }
 }
