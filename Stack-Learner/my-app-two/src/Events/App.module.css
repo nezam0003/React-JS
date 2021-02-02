@@ -27,3 +27,11 @@
   background: green;
   transform: scaleX(0.97);
 }
+.inputTextField {
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px soid #fff;
+  outline: none;
+  margin-top: 1rem;
+}
