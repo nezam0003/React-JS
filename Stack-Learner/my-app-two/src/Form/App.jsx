@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import UncontrolledForm from "./Uncontrolled-form";
-import ControlledForm from "./Controlled-form";
+// import ControlledForm from "./Controlled-form";
+import SpliteForm from "./Split-Form/Index";
 import classes from "./Style.module.css";
 
 export default class App extends Component {
@@ -9,7 +10,7 @@ export default class App extends Component {
       <div className={classes.wrapper}>
         <h1 className={classes.title}>React Form</h1>
         {/* <UncontrolledForm /> */}
-        <ControlledForm />
+        <SpliteForm />
       </div>
     );
   }
