@@ -4,7 +4,7 @@ import classes from "./App.module.css";
 const App = () => {
   return (
     <div className={classes.wrapper}>
-      <h1 className="display-4 text-center text-primary">Hello Tic Tac Toe</h1>
+      <h1 className="display-4 text-center text-primary">Tic Tac Toe</h1>
       <Game />
     </div>
   );
