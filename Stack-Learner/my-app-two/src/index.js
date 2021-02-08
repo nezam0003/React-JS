@@ -22,9 +22,16 @@
 // reportWebVitals();
 
 /*********** Tic-Tac-Toe Game **********/
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import App from "./Tic-tac-toe/App";
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/************ My-To-Do Apps *********/
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./Tic-tac-toe/App";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-
+import App from "./Todo/App";
 ReactDOM.render(<App />, document.getElementById("root"));
