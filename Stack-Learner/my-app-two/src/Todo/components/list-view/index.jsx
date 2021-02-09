@@ -1,5 +1,5 @@
 import React from "react";
-import PorpTypes from "prop-types";
+import PropTypes from "prop-types";
 import { ListGroup, ListGroupItem, CustomInput, Button } from "reactstrap";
 
 const ListItem = ({ todo, toggleSelect, toggleComplete }) => {
@@ -25,24 +25,31 @@ const ListItem = ({ todo, toggleSelect, toggleComplete }) => {
     </ListGroupItem>
   );
 };
-ListItem.proptype = {
-  todo: PropTypes.object.isRequried,
-  toggleSelect: PropTypes.func.isRequried,
-  toggleComplete: PropTypes.func.isRequried,
+ListItem.prototype = {
+  todo: PropTypes.object.isRequired,
+  toggleSelect: PropTypes.func.isRequired,
+  toggleComplete: PropTypes.func.isRequired,
 };
 
-const ListView = ({ todos }) => {
+const ListView = ({ todos, toggleSelect, toggleComplete }) => {
   return (
     <ListGroup>
-      {todos.map((todo, toggleSelect, toggleComplete) => {
-        <ListItem key={todo.id} toggleSelect={toggleSelect} toggleComplete={toggleComplete} />;
+      {todos.map((todo) => {
+        return (
+          <ListItem
+            key={todo.id}
+            todo={todo}
+            toggleSelect={toggleSelect}
+            toggleComplete={toggleComplete}
+          />
+        );
       })}
     </ListGroup>
   );
 };
-ListView.proptype = {
-  todo: PropTypes.object.isRequried,
-  toggleSelect: PropTypes.func.isRequried,
-  toggleComplete: PropTypes.func.isRequried,
+ListView.propTypes = {
+  todos: PropTypes.object.isRequired,
+  toggleSelect: PropTypes.func.isRequired,
+  toggleComplete: PropTypes.func.isRequired,
 };
 export default ListView;
