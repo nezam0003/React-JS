@@ -88,9 +88,22 @@ export default class Todos extends Component {
       view: e.target.value,
     });
   };
-  clearSelected = () => {};
-  clearCompleted = () => {};
-  reset = () => {};
+  clearSelected = () => {
+    const todos = this.state.todos.filter((todo) => !todo.isSelect);
+    this.setState({ todos });
+  };
+  clearCompleted = () => {
+    const todos = this.state.todos.filter((todo) => !todo.isComplete);
+    this.setState({ todos });
+  };
+  reset = () => {
+    this.setState({
+      filter: "all",
+      view: "list",
+      searchTerm: "",
+      isOpenTodoForm: false,
+    });
+  };
   getView = () => {
     let todos = this.performSearch();
     todos = this.performFilter(todos);
