@@ -29,6 +29,7 @@ export default class Todos extends Component {
     isOpenTodoForm: false,
     searchTerm: "",
     view: "list",
+    filter: "all",
   };
 
   toggleSelect = (todoId) => {
@@ -48,8 +49,15 @@ export default class Todos extends Component {
       isOpenTodoForm: !this.state.isOpenTodoForm,
     });
   };
-  handleSearch = (e) => {
-    console.log("search");
+  handleSearch = (value) => {
+    this.setState({
+      searchTerm: value,
+    });
+  };
+  performSearch = () => {
+    return this.state.todos.filter((todo) =>
+      todo.text.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+    );
   };
   createToDo = (todo) => {
     todo.id = shortid.generate();
@@ -62,7 +70,19 @@ export default class Todos extends Component {
     this.toggleForm();
   };
 
-  handleFilter = () => {};
+  handleFilter = (filter) => {
+    this.setState({ filter });
+  };
+  performFilter = (todos) => {
+    const { filter } = this.state;
+    if (filter === "completed") {
+      return todos.filter((todo) => todo.isComplete);
+    } else if (filter === "running") {
+      return todos.filter((todo) => !todo.isComplete);
+    } else {
+      return todos;
+    }
+  };
   changeView = (e) => {
     this.setState({
       view: e.target.value,
@@ -72,15 +92,17 @@ export default class Todos extends Component {
   clearCompleted = () => {};
   reset = () => {};
   getView = () => {
+    let todos = this.performSearch();
+    todos = this.performFilter(todos);
     return this.state.view === "list" ? (
       <ListView
-        todos={this.state.todos}
+        todos={todos}
         toggleSelect={this.toggleSelect}
         toggleComplete={this.toggleComplete}
       />
     ) : (
       <TableView
-        todos={this.state.todos}
+        todos={todos}
         toggleSelect={this.toggleSelect}
         toggleComplete={this.toggleComplete}
       />
