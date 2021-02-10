@@ -30,8 +30,15 @@
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /************ My-To-Do Apps *********/
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
+// import App from "./Todo/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/********** Smart Poll  ************/
 import React from "react";
 import ReactDOM from "react-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import App from "./Todo/App";
+import App from "./Smart-Poll/App";
 ReactDOM.render(<App />, document.getElementById("root"));
