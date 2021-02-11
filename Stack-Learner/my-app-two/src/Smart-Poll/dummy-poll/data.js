@@ -1,4 +1,4 @@
-const polls = [
+const POLLS = [
   {
     id: 123,
     title: "Which Programmming language You will choice",
@@ -47,4 +47,4 @@ const polls = [
   },
 ];
 
-export default polls;
+export default POLLS;
