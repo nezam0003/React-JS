@@ -64,6 +64,7 @@ export default class App extends Component {
               searchTerm={this.state.searchTerm}
               handleSearch={this.handleSearch}
               selectPoll={this.selectPoll}
+              addNewPoll={this.addNewPoll}
             />
           </Col>
           <Col md={8}>
