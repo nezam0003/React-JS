@@ -51,12 +51,20 @@ export default class App extends Component {
     this.setState({ selectedPoll: poll });
   };
 
+  //   Handle Search in Sidebar
+  handleSearch = (searchTerm) => {};
+
   render() {
     return (
       <Container className="my-5">
         <Row>
           <Col md={4}>
-            <Sidebar />
+            <Sidebar
+              polls={this.state.polls}
+              searchTerm={this.state.searchTerm}
+              handleSearch={this.handleSearch}
+              selectPoll={this.selectPoll}
+            />
           </Col>
           <Col md={8}>
             <MainContent />
