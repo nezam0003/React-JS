@@ -51,6 +51,23 @@ export default class App extends Component {
     this.setState({ selectedPoll: poll });
   };
 
+  // Get Opinion
+  getOpinion = (response) => {
+    const { polls } = this.state;
+    const poll = polls.find((p) => p.id === response.pollId);
+    const option = poll.options.find((o) => o.id === response.selectedOption);
+
+    poll.totalVote++;
+    option.vote++;
+    const opinion = {
+      id: shortid.generate(),
+      name: response.name,
+      selectedOption: response.selectedOption,
+    };
+    poll.opinions.push(opinion);
+    this.setState({ polls });
+  };
+
   //   Handle Search in Sidebar
   handleSearch = (searchTerm) => {};
 
@@ -68,7 +85,12 @@ export default class App extends Component {
             />
           </Col>
           <Col md={8}>
-            <MainContent />
+            <MainContent
+              poll={this.state.selectedPoll}
+              getOpinion={this.getOpinion}
+              updatePoll={this.updatePoll}
+              deletePoll={this.deletePoll}
+            />
           </Col>
         </Row>
       </Container>
