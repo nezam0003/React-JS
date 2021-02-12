@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import ParticipationForm from "./participate-form";
-import PollForm from "../poll-form/index";
+import PollForm from "../poll-form";
 export default class MainContent extends Component {
   state = {
     openModal: false,
@@ -41,7 +41,7 @@ export default class MainContent extends Component {
         />
 
         <Modal isOpen={this.state.openModal} toggle={this.toggleModal} unmountOnClose={true}>
-          <ModalHeader toggle={this.toggleModal}>Update Modal</ModalHeader>
+          <ModalHeader toggle={this.toggleModal}>Update Poll</ModalHeader>
           <ModalBody>
             <PollForm poll={poll} isUpdate={true} submit={updatePoll} buttonValue="update Poll" />
           </ModalBody>

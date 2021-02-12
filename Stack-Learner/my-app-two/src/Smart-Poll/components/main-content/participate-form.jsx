@@ -16,7 +16,7 @@ export default class ParticipationForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const [isValid, errors] = this.validate();
+    const { isValid, errors } = this.validate();
     if (isValid) {
       this.props.getOpinion({
         pollId: this.props.poll.id,
@@ -54,7 +54,7 @@ export default class ParticipationForm extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleChange}>
+      <Form onSubmit={this.handleSubmit}>
         <div className="d-flex">
           <h4>Options</h4>
           <Button
@@ -106,7 +106,7 @@ export default class ParticipationForm extends Component {
                   borderRadius: "5px",
                 }}
               >
-                {this.props.totalVote > 0
+                {this.props.poll.totalVote > 0
                   ? ((100 * opt.vote) / this.props.poll.totalVote).toFixed(2)
                   : 0}
                 %

@@ -23,6 +23,17 @@ export default class PollForm extends Component {
     errors: {},
   };
 
+  componentDidMount = () => {
+    const { poll } = this.props;
+    if (poll && Object.keys(poll).length > 0) {
+      this.setState({
+        title: poll.title,
+        description: poll.description,
+        options: poll.options,
+      });
+    }
+  };
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -64,18 +75,25 @@ export default class PollForm extends Component {
     const { isValid, errors } = this.validate();
     if (isValid) {
       const { title, description, options } = this.state;
-      this.props.submit({
+      const poll = {
         title,
         description,
         options,
-      });
-      e.target.reset();
-      this.setState({
-        title: "",
-        description: "",
-        options: defaultOptions,
-        errors: {},
-      });
+      };
+      if (this.props.isUpdate) {
+        poll.id = this.props.poll.id;
+        this.props.submit(poll);
+        alert("Updated Successfully");
+      } else {
+        this.props.submit(poll);
+        e.target.reset();
+        this.setState({
+          title: "",
+          description: "",
+          options: defaultOptions,
+          errors: {},
+        });
+      }
     } else {
       this.setState({ errors });
     }

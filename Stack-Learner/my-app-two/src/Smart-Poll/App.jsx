@@ -69,15 +69,23 @@ export default class App extends Component {
   };
 
   //   Handle Search in Sidebar
-  handleSearch = (searchTerm) => {};
+  handleSearch = (searchTerm) => {
+    this.setState({ searchTerm });
+  };
+  performSearchTerm = () => {
+    return this.state.polls.filter((poll) =>
+      poll.title.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+    );
+  };
 
   render() {
+    const polls = this.performSearchTerm();
     return (
       <Container className="my-5">
         <Row>
           <Col md={4}>
             <Sidebar
-              polls={this.state.polls}
+              polls={polls}
               searchTerm={this.state.searchTerm}
               handleSearch={this.handleSearch}
               selectPoll={this.selectPoll}
