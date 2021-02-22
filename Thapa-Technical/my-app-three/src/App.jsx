@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import MyCard from "./components/Card";
 import Header from "./components/Header";
 import movieData from "./mData";
+import shortid from "shortid";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
             const { id, imgsrc, description, title, movieLink } = data;
             // console.log(id);
             return (
-              <Col md="4" className="my-3" key={id}>
+              <Col md="4" className="my-3" key={shortid.generate()}>
                 <MyCard
                   imageSource={imgsrc}
                   description={description}
