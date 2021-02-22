@@ -1,7 +1,8 @@
 import React from "react";
+import Student from "./Student";
 
 const App = () => {
-  return <div>hello</div>;
+  return <Student name="Fhameed" />;
 };
 
 export default App;
