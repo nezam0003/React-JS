@@ -13,5 +13,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /************* Mounting in React *********/
-import App from "./Life-Cycle-Method/Mounting/App";
+// import App from "./Life-Cycle-Method/Mounting/App";
+// ReactDOM.render(<App name="I am App Props" />, document.getElementById("root"));
+
+/************* Updating in React *********/
+import App from "./Life-Cycle-Method/Updating/App";
 ReactDOM.render(<App name="I am App Props" />, document.getElementById("root"));
