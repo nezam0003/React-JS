@@ -28,5 +28,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.unmountComponentAtNode(document.getElementById("unmount"));
 
 /************* Hooks in React *********/
-import App from "./Hooks/App";
+// import App from "./Hooks/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+import App from "./Hooks/UseEffectHooks/App";
 ReactDOM.render(<App />, document.getElementById("root"));
