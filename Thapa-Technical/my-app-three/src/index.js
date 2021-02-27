@@ -15,5 +15,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /******* Events Handling *****/
-import App from "./Events/BackgroundChange/App";
+// import App from "./Events/BackgroundChange/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/******* Events Handling *****/
+import App from "./Forms/Single-Data/App";
 ReactDOM.render(<App />, document.getElementById("root"));
