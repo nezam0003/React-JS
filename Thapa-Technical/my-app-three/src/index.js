@@ -11,5 +11,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /******* Hooks - Chanllange-2 *****/
-import App from "./Hooks/Challange-2/App";
+// import App from "./Hooks/Challange-2/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/******* Events Handling *****/
+import App from "./Events/BackgroundChange/App";
 ReactDOM.render(<App />, document.getElementById("root"));
