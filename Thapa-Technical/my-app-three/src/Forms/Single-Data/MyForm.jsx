@@ -3,24 +3,34 @@ import { Form, Button, Input } from "reactstrap";
 import classes from "../../Style.module.css";
 
 const MyForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-
-  const [showFirstName, setshowFirstName] = useState();
-  const [showLastName, setShowLastName] = useState();
+  const [fullName, setFullName] = useState({
+    firstName: "",
+    lastName: "",
+  });
 
   const inputFieldhandller = (e) => {
-    setFirstName(e.target.value);
-  };
-
-  const lastNameHandller = (e) => {
-    setLastName(e.target.value);
+    const name = e.target.name;
+    const value = e.target.value;
+    setFullName((prevValue) => {
+      if (name === "firstName") {
+        return {
+          firstName: value,
+          lastName: prevValue.lastName,
+        };
+      } else if (name === "lastName") {
+        return {
+          firstName: prevValue.firstName,
+          lastName: value,
+        };
+      }
+    });
   };
 
   const showDataOnSubmit = (e) => {
     e.preventDefault();
-    setshowFirstName(firstName);
-    setShowLastName(lastName);
+    alert("Form submited");
+    // setshowFirstName(name);
+    // setShowLastName(lastName);
   };
 
   return (
@@ -28,22 +38,24 @@ const MyForm = () => {
       <h4 className="display-4 text-warning">
         Hello,
         <span className="text-white">
-          {showFirstName} {showLastName}
+          {fullName.firstName} {fullName.lastName}
         </span>
       </h4>
       <Form onSubmit={showDataOnSubmit}>
         <Input
           type="text"
           placeholder="Enter your First Name"
-          value={firstName}
+          value={fullName.firstName}
+          name="firstName"
           onChange={inputFieldhandller}
         />
         <Input
           className="mt-2"
           type="text"
           placeholder="Enter your Last Name"
-          value={lastName}
-          onChange={lastNameHandller}
+          value={fullName.lastName}
+          name="lastName"
+          onChange={inputFieldhandller}
         />
         <Button type="submit" color="success" className="mt-3">
           Submit
