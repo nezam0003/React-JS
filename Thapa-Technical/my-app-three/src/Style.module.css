@@ -2,10 +2,13 @@ body {
   background-color: #8e44ad;
 }
 .mainContent {
-  width: 50%;
+  width: 70%;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.myForm {
+  width: 100%;
 }
