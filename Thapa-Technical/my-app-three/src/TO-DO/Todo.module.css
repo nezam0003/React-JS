@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 .mainDiv {
   width: 100%;
@@ -12,3 +13,13 @@
   align-items: center;
   background: #6983aa;
 }
+.centerDiv {
+  width: 25%;
+  height: 80vh;
+  background: #f4f4f4;
+  border-radius: 15px;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+}
+/* .showData {
+
+} */
