@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header {
+  padding: 1rem 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  background-color: #333;
+  color: #fff;
+}
+.footer {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+}
