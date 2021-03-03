@@ -23,5 +23,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /******* TO-DO project *****/
-import App from "./TO-DO/App";
+// import App from "./TO-DO/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/******* Google-Keep-Clone project *****/
+import App from "./Google-Keep-Clone/App";
 ReactDOM.render(<App />, document.getElementById("root"));
