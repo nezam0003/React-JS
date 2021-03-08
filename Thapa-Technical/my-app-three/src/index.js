@@ -27,5 +27,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /******* Google-Keep-Clone project *****/
-import App from "./Google-Keep-Clone/App";
+// import App from "./Google-Keep-Clone/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/******* Google-Keep-Clone project *****/
+import App from "./Context-API/App";
 ReactDOM.render(<App />, document.getElementById("root"));
