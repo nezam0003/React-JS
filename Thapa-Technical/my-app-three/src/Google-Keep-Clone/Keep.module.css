@@ -26,12 +26,6 @@
   justify-content: center;
   align-items: center;
 }
-.note {
-  margin: 2rem auto;
-  width: 35%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
 .max_height {
   min-height: calc(100vh - 80px);
 }
