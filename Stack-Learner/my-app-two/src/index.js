@@ -1,3 +1,7 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
 // import React from "react";
 // import ReactDOM from "react-dom";
 // import "./index.css";
@@ -37,8 +41,11 @@
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /********** Smart Poll  ************/
-import React from "react";
-import ReactDOM from "react-dom";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import App from "./Smart-Poll/App";
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import App from "./Smart-Poll/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/********** React-Router  ************/
+import App from "./React-Router/App";
 ReactDOM.render(<App />, document.getElementById("root"));
