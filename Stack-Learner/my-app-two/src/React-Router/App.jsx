@@ -5,6 +5,7 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 
 import Navbar from "./Components/Navbar";
+import Test from "./Components/Test";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
+          <Route path="/posts/:postId" component={Test} />
         </Switch>
       </div>
     </BrowserRouter>
