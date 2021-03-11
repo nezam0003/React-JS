@@ -31,5 +31,15 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 /******* Google-Keep-Clone project *****/
-import App from "./Context-API/App";
-ReactDOM.render(<App />, document.getElementById("root"));
+// import App from "./Context-API/App";
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+/******* React-Router *****/
+import App from "./React-Router/App";
+import { BrowserRouter } from "react-router-dom";
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
