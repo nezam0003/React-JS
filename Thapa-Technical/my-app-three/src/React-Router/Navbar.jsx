@@ -33,6 +33,12 @@ const Navbar = () => {
         >
           About
         </NavLink>
+        <NavLink
+          activeStyle={{ borderBottom: "2px solid red", color: "#fff", fontWeight: "bold" }}
+          to="/user/nezam/khan"
+        >
+          User
+        </NavLink>
       </nav>
     </>
   );
