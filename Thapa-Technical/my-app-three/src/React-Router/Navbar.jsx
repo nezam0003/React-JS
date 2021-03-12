@@ -15,26 +15,46 @@ const Navbar = () => {
     <>
       <nav style={navBarStyle}>
         <NavLink
-          activeStyle={{ borderBottom: "2px solid red", color: "#fff", fontWeight: "bold" }}
+          activeStyle={{
+            borderBottom: "2px solid red",
+            color: "#fff",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
           exact
           to="/"
         >
           Home
         </NavLink>
         <NavLink
-          activeStyle={{ borderBottom: "2px solid red", color: "#fff", fontWeight: "bold" }}
+          activeStyle={{
+            borderBottom: "2px solid red",
+            color: "#fff",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
           to="/contact"
         >
           Contact
         </NavLink>
         <NavLink
-          activeStyle={{ borderBottom: "2px solid red", color: "#fff", fontWeight: "bold" }}
+          activeStyle={{
+            borderBottom: "2px solid red",
+            color: "#fff",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
           to="/about"
         >
           About
         </NavLink>
         <NavLink
-          activeStyle={{ borderBottom: "2px solid red", color: "#fff", fontWeight: "bold" }}
+          activeStyle={{
+            borderBottom: "2px solid red",
+            color: "#fff",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
           to="/user/nezam/khan"
         >
           User
