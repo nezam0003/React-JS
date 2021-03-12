@@ -1,11 +1,13 @@
 import React from "react";
-import { useParams, useLocation, Link } from "react-router-dom";
+import { useParams, useLocation, Link, useHistory } from "react-router-dom";
 import { Button } from "reactstrap";
 
 const User = () => {
   const { fName, lName } = useParams();
   const { pathname: location } = useLocation();
-  console.log(location);
+  const history = useHistory();
+  console.log("location", location);
+  console.log("history", history);
 
   return (
     <>
@@ -19,7 +21,11 @@ const User = () => {
             Go to Home
           </Link>
         </Button>
-      ) : null}
+      ) : (
+        <Button color="primary" onClick={() => history.goBack()}>
+          go Back
+        </Button>
+      )}
     </>
   );
 };
