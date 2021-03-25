@@ -16,7 +16,7 @@ import img11 from "./images/room-11.jpeg";
 import img12 from "./images/room-12.jpeg";
 
 export default [
-  ({
+  {
     sys: {
       id: "1",
     },
@@ -756,5 +756,5 @@ export default [
         },
       ],
     },
-  }),
+  },
 ];
