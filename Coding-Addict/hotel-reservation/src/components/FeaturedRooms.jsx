@@ -8,9 +8,8 @@ export default class FeaturedRooms extends Component {
   static contextType = RoomContext;
   render() {
     let { loading, featuredRooms: rooms } = this.context;
-    // console.log(rooms);
+
     rooms = rooms.map((room) => {
-      // console.log(room);
       return <Room key={room.id} room={room} />;
     });
     return (
